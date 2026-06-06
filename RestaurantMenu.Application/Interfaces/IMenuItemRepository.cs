@@ -7,7 +7,7 @@ namespace RestaurantMenu.Application.Interfaces
 {
     public interface IMenuItemRepository : IGenericRepository<MenuItem>
     {
-        Task<IEnumerable<MenuItem>> GetAllAsyncWithCategoryAsync();
+        Task<IEnumerable<MenuItem>> GetAllWithCategoryAsync();
         Task<MenuItem?> GetByIdWithCategoryAsync(int id);
     }
 }
