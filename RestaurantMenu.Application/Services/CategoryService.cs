@@ -33,7 +33,7 @@ namespace RestaurantMenu.Application.Services
 
         }
 
-        public async Task<CategoryDto> GetByIdAsync(int id)
+        public async Task<CategoryDto?> GetByIdAsync(int id)
         {
             var category = await _categoryRepository.GetByIdWithMenuItemsAsync(id);
             if (category == null)
