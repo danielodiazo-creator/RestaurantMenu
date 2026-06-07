@@ -18,7 +18,7 @@ namespace RestaurantMenu.Application.Services
 
         public async Task<IEnumerable<MenuItemDto>> GetAllAsync()
         {
-            var menuItems = await _menuItemRepository.GetAllAsyncWithCategoryAsync();
+            var menuItems = await _menuItemRepository.GetAllWithCategoryAsync();
 
             return menuItems.Select(item => new MenuItemDto
             {
@@ -33,7 +33,7 @@ namespace RestaurantMenu.Application.Services
 
         }
 
-        public async Task<MenuItemDto> GetByIdAsync(int id)
+        public async Task<MenuItemDto?> GetByIdAsync(int id)
         {
             var item = await _menuItemRepository.GetByIdWithCategoryAsync(id);
             if (item == null)

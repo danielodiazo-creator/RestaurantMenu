@@ -19,6 +19,8 @@ namespace RestaurantMenu.API
             builder.Services.AddApplication();
             builder.Services.AddInfrastructure(builder.Configuration);
 
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
@@ -26,6 +28,11 @@ namespace RestaurantMenu.API
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
+
+                app.UseSwagger();
+                app.UseSwaggerUI();
+                
+
             }
 
             app.UseHttpsRedirection();
