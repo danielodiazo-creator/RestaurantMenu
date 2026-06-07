@@ -5,48 +5,76 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f5f5f5;
+  background: #f7f3ed;
+  color: #2b2b2b;
 }
 
 .navbar {
-  background-color: #1f2937;
+  background: #7f1d1d;
   color: white;
-  padding: 15px 30px;
-
+  padding: 18px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.navbar h2 {
+  margin: 0;
+}
+
 .navbar a {
   color: white;
   text-decoration: none;
-  margin-left: 15px;
+  margin-left: 20px;
+  font-weight: bold;
 }
 
 .navbar a:hover {
-  text-decoration: underline;
+  color: #facc15;
 }
 
 .container {
-  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 35px 20px;
+}
+
+h1 {
+  color: #7f1d1d;
+  margin-bottom: 10px;
 }
 
 .form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 input,
 select {
-  padding: 8px;
+  padding: 10px;
+  border: 1px solid #d6d3d1;
+  border-radius: 6px;
+  min-width: 180px;
 }
 
 button {
-  padding: 8px 12px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #7f1d1d;
+  color: white;
   cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #991b1b;
 }
 
 .list {
@@ -56,13 +84,24 @@ button {
 
 .list-item {
   background: white;
-  border-radius: 8px;
-  padding: 15px;
+  border-left: 6px solid #7f1d1d;
+  border-radius: 10px;
+  padding: 18px;
   margin-bottom: 15px;
-  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.list-item p {
+  margin: 5px 0;
 }
 
 .error {
-  color: red;
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 10px;
+  border-radius: 6px;
   font-weight: bold;
 }
